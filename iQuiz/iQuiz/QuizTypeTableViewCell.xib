@@ -24,29 +24,44 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGa-XO-Glu">
-                        <rect key="frame" x="176" y="35" width="104" height="66"/>
+                        <rect key="frame" x="210" y="10" width="104" height="47"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="104" id="6Ch-eg-BhP"/>
-                            <constraint firstAttribute="height" constant="66" id="Wul-we-ySn"/>
+                            <constraint firstAttribute="height" constant="47" id="Wul-we-ySn"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdm-tx-ECL">
+                        <rect key="frame" x="210" y="55" width="104" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="104" id="Feb-ek-fM5"/>
+                            <constraint firstAttribute="height" constant="58" id="We4-4W-I1u"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="KGa-XO-Glu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="0sG-Cy-Mjg"/>
-                    <constraint firstItem="KGa-XO-Glu" firstAttribute="leading" secondItem="6aG-l2-13d" secondAttribute="trailing" constant="40" id="JvR-Cg-Bb8"/>
+                    <constraint firstItem="KGa-XO-Glu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0sG-Cy-Mjg"/>
+                    <constraint firstItem="KGa-XO-Glu" firstAttribute="leading" secondItem="6aG-l2-13d" secondAttribute="trailing" constant="74" id="JvR-Cg-Bb8"/>
                     <constraint firstItem="6aG-l2-13d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Y5c-gP-iwi"/>
-                    <constraint firstAttribute="bottom" secondItem="KGa-XO-Glu" secondAttribute="bottom" constant="30" id="oYp-yM-h7d"/>
+                    <constraint firstItem="Kdm-tx-ECL" firstAttribute="top" secondItem="KGa-XO-Glu" secondAttribute="bottom" constant="-2" id="e90-Rq-QKm"/>
+                    <constraint firstItem="Kdm-tx-ECL" firstAttribute="leading" secondItem="6aG-l2-13d" secondAttribute="trailing" constant="74" id="h2h-Wf-P5j"/>
+                    <constraint firstAttribute="bottom" secondItem="KGa-XO-Glu" secondAttribute="bottom" constant="74" id="oYp-yM-h7d"/>
                     <constraint firstItem="6aG-l2-13d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="sXN-b5-GjO"/>
+                    <constraint firstItem="KGa-XO-Glu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ssP-s1-Bs8"/>
                     <constraint firstAttribute="bottom" secondItem="6aG-l2-13d" secondAttribute="bottom" constant="6" id="vAA-ws-vWQ"/>
+                    <constraint firstAttribute="bottom" secondItem="KGa-XO-Glu" secondAttribute="bottom" constant="74" id="z1k-Ev-fe5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="myImageView" destination="6aG-l2-13d" id="8GL-rH-WKy"/>
-                <outlet property="myLabel" destination="KGa-XO-Glu" id="XbU-iC-gNS"/>
+                <outlet property="quizDescription" destination="Kdm-tx-ECL" id="tbp-g9-46v"/>
+                <outlet property="quizImageView" destination="6aG-l2-13d" id="8GL-rH-WKy"/>
+                <outlet property="quizTitle" destination="KGa-XO-Glu" id="XbU-iC-gNS"/>
             </connections>
             <point key="canvasLocation" x="186.95652173913044" y="122.87946428571428"/>
         </tableViewCell>

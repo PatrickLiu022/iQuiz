@@ -9,8 +9,9 @@ import UIKit
 
 class QuizTypeTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var quizTitle: UILabel!
+    @IBOutlet weak var quizImageView: UIImageView!
+    @IBOutlet weak var quizDescription: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

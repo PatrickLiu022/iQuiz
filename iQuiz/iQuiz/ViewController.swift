@@ -9,37 +9,57 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    let myData = ["Mathematics", "Marvel Super Heroes", "Science"]
+    @IBOutlet weak var quizTableView: UITableView!
+    @IBOutlet weak var settingsTableView: UITableView!
+    
+    let quizTypes = ["Mathematics", "Marvel Super Heroes", "Science"]
+    let quizImages = [
+        UIImage(named: "math-chalkboard"),
+        UIImage(named: "marvel-image"),
+        UIImage(named: "science-logo")
+    ]
+    let quizDescription = [
+        "Test your basic math skills from elementary school",
+        "Put your geek side to the test",
+        "Test your basic science skills from elementary school"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let nib = UINib(nibName: "QuizTypeTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "QuizTypeTableViewCell")
-        tableView.delegate = self
-        tableView.dataSource = self
+        let quizNib = UINib(nibName: "QuizTypeTableViewCell", bundle: nil)
+        
+        quizTableView.register(quizNib, forCellReuseIdentifier: "QuizTypeTableViewCell")
+        quizTableView.delegate = self
+        quizTableView.dataSource = self
     }
-    
-    // TableView Funcs
 
+    @IBAction func displayAlert() {
+        let alert = UIAlertController(title: "Settings go here", message: "OK", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            (action) in
+            print("Cancel")
+        }))
+        self.present(alert, animated: true)
+    }
 }
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("At \(indexPath.row)")
+        print("table cell \(indexPath.row)")
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myData.count
+        return quizTypes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizTypeTableViewCell", for: indexPath) as! QuizTypeTableViewCell
-        cell.myLabel?.text = myData[indexPath.row]
-        cell.myImageView?.backgroundColor = .cyan
+        let cell = quizTableView.dequeueReusableCell(withIdentifier: "QuizTypeTableViewCell", for: indexPath) as! QuizTypeTableViewCell
+        cell.quizTitle?.text = quizTypes[indexPath.row]
+        cell.quizImageView?.image = quizImages[indexPath.row]
+        cell.quizDescription?.text = quizDescription[indexPath.row]
         return cell
     }
 }
