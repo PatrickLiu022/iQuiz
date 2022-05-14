@@ -8,11 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var mathQuizVC: MathQuizViewController! = nil
+
     
     @IBOutlet weak var quizTableView: UITableView!
-    @IBOutlet weak var settingsTableView: UITableView!
     
     let quizTypes = ["Mathematics", "Marvel Super Heroes", "Science"]
     let quizImages = [
@@ -60,20 +58,6 @@ extension ViewController: UITableViewDelegate {
         }
         
     }
-    
-//    func switchViewController(_ from: UIViewController?, to: UIViewController?) {
-//        if from != nil {
-//            from?.willMove(toParent: nil)
-//            from!.view.removeFromSuperview()
-//            from!.removeFromParent()
-//        }
-//
-//        if to != nil {
-//            self.addChild(to!)
-//            self.view.insertSubview(to!.view, at: 0)
-//            to!.didMove(toParent: self)
-//        }
-//    }
 }
 
 extension ViewController: UITableViewDataSource {
