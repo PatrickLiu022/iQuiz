@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FA42AF6282E6F2C002130C8 /* MathQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA42AF5282E6F2C002130C8 /* MathQuizViewController.swift */; };
 		1FE7A952282BA0A800D61DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE7A951282BA0A800D61DA2 /* AppDelegate.swift */; };
 		1FE7A954282BA0A800D61DA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE7A953282BA0A800D61DA2 /* SceneDelegate.swift */; };
 		1FE7A956282BA0A800D61DA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE7A955282BA0A800D61DA2 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FA42AF5282E6F2C002130C8 /* MathQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizViewController.swift; sourceTree = "<group>"; };
 		1FE7A94E282BA0A800D61DA2 /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE7A951282BA0A800D61DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FE7A953282BA0A800D61DA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				1FE7A953282BA0A800D61DA2 /* SceneDelegate.swift */,
 				1FE7A955282BA0A800D61DA2 /* ViewController.swift */,
 				1FE7A957282BA0A800D61DA2 /* Main.storyboard */,
+				1FA42AF5282E6F2C002130C8 /* MathQuizViewController.swift */,
 				1FE7A95A282BA0AB00D61DA2 /* Assets.xcassets */,
 				1FE7A95C282BA0AB00D61DA2 /* LaunchScreen.storyboard */,
 				1FE7A95F282BA0AB00D61DA2 /* Info.plist */,
@@ -269,6 +272,7 @@
 				1FE7A956282BA0A800D61DA2 /* ViewController.swift in Sources */,
 				1FE7A952282BA0A800D61DA2 /* AppDelegate.swift in Sources */,
 				1FE7A954282BA0A800D61DA2 /* SceneDelegate.swift in Sources */,
+				1FA42AF6282E6F2C002130C8 /* MathQuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

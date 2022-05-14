@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var mathQuizVC: MathQuizViewController! = nil
+    
     @IBOutlet weak var quizTableView: UITableView!
     @IBOutlet weak var settingsTableView: UITableView!
     
@@ -45,9 +47,33 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("table cell \(indexPath.row)")
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            print("Math")
+            performSegue(withIdentifier: "MathQuizVCSegue", sender: self)
+        } else if indexPath.row == 1 {
+            performSegue(withIdentifier: "MarvelQuizVCSegue", sender: self)
+        } else {
+            performSegue(withIdentifier: "ScienceQuizVCSegue", sender: self)
+        }
+        
     }
+    
+//    func switchViewController(_ from: UIViewController?, to: UIViewController?) {
+//        if from != nil {
+//            from?.willMove(toParent: nil)
+//            from!.view.removeFromSuperview()
+//            from!.removeFromParent()
+//        }
+//
+//        if to != nil {
+//            self.addChild(to!)
+//            self.view.insertSubview(to!.view, at: 0)
+//            to!.didMove(toParent: self)
+//        }
+//    }
 }
 
 extension ViewController: UITableViewDataSource {
