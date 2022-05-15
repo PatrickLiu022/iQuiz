@@ -41,7 +41,9 @@ class MarvelQuizAnswerOneViewController: UIViewController {
 
 extension MarvelQuizAnswerOneViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("a")
+        if indexPath.row == 2 {
+            performSegue(withIdentifier: "UnwindToHome", sender: self)
+        }
     }
 }
 
@@ -52,7 +54,7 @@ extension MarvelQuizAnswerOneViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
-        cell.textLabel?.text = resultsArray[indexPath.count]
+        cell.textLabel?.text = resultsArray[indexPath.row]
         return cell
     }
 }
