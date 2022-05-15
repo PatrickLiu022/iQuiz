@@ -25,8 +25,12 @@ class MarvelQuizViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destVC = segue.destination as? MarvelQuizAnswerOneViewController {
-            destVC.isCorrect?.text = isCorrect ? "You are Correct!" : "You are Wrong!"
-            destVC.userAnswer?.text = "Answer: Bucky"
+            
+            let selectedAnswer = isCorrect ? "You are Correct!" : "You are Wrong!"
+            let correctAnswer = "Answer: Bucky"
+            
+            destVC.resultsArray[0] = selectedAnswer
+            destVC.resultsArray[1] = correctAnswer
         }
     }
 }

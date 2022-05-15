@@ -9,13 +9,21 @@ import UIKit
 
 class MarvelQuizAnswerOneViewController: UIViewController {
     
-    @IBOutlet weak var userAnswer: UILabel!
-    @IBOutlet weak var isCorrect: UILabel!
+    var resultsArray: [String] = ["", "", "Go to Home"]
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    @IBAction func goHome(_ sender: Any?) {
+        performSegue(withIdentifier: "UnwindToHome", sender: self)
     }
     
 
@@ -29,4 +37,22 @@ class MarvelQuizAnswerOneViewController: UIViewController {
     }
     */
 
+}
+
+extension MarvelQuizAnswerOneViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("a")
+    }
+}
+
+extension MarvelQuizAnswerOneViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return resultsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
+        cell.textLabel?.text = resultsArray[indexPath.count]
+        return cell
+    }
 }
