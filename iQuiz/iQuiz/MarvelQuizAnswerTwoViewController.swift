@@ -1,15 +1,15 @@
 //
-//  MarvelQuizAnswerOneViewController.swift
+//  MarvelQuizAnswerTwoViewController.swift
 //  iQuiz
 //
-//  Created by Patrick Liu on 5/14/22.
+//  Created by Patrick Liu on 5/16/22.
 //
 
 import UIKit
 
-class MarvelQuizAnswerOneViewController: UIViewController {
+class MarvelQuizAnswerTwoViewController: UIViewController {
     
-    var resultsArray: [String] = ["", "", "--------", "Go to Next", "Go to Home"]
+    var resultsArray: [String] = ["", "", "--------", "Go To Next", "Go To Home"]
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -17,9 +17,8 @@ class MarvelQuizAnswerOneViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        tableView.dataSource = self
         tableView.delegate = self
+        tableView.dataSource = self
     }
     
 
@@ -35,24 +34,24 @@ class MarvelQuizAnswerOneViewController: UIViewController {
 
 }
 
-extension MarvelQuizAnswerOneViewController: UITableViewDelegate {
+extension MarvelQuizAnswerTwoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 4 {
             performSegue(withIdentifier: "UnwindToHome", sender: self)
         }
         else if indexPath.row == 3 {
-            performSegue(withIdentifier: "MarvelQuestionTwoVCSegue", sender: self)
+            performSegue(withIdentifier: "MarvelQuestionThreeVCSegue", sender: self)
         }
     }
 }
 
-extension MarvelQuizAnswerOneViewController: UITableViewDataSource {
+extension MarvelQuizAnswerTwoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
         cell.textLabel?.text = resultsArray[indexPath.row]
         return cell
     }

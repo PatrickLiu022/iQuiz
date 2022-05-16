@@ -43,9 +43,9 @@ class ViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    @IBAction func unwind(_ seg: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwind(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind2(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind3(_ seg: UIStoryboardSegue) {}
 }
 
 extension ViewController: UITableViewDelegate {
@@ -53,7 +53,6 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
-            print("Math")
             performSegue(withIdentifier: "MathQuizVCSegue", sender: self)
         } else if indexPath.row == 1 {
             performSegue(withIdentifier: "MarvelQuizVCSegue", sender: self)

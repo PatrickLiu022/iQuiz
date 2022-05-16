@@ -1,28 +1,46 @@
+//
+//  MarvelQuizQuestionTwoViewController.swift
+//  iQuiz
+//
+//  Created by Patrick Liu on 5/16/22.
+//
+
 import UIKit
 
-class MarvelQuizViewController: UIViewController {
+class MarvelQuizQuestionTwoViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
-
-	let answers = ["Henry", "Tony", "Bucky", "Clint"]
+    
+    let answers = ["Silver Surfer", "Iron Man", "Spider Man", "Uncle Ben"]
     var isCorrect = false
 
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-        let cellNib = UINib(nibName: "AnswerCollectionViewCell", bundle: nil)
-        collectionView.register(cellNib, forCellWithReuseIdentifier: "AnswerCollectionViewCell")
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        let cellQ2Nib = UINib(nibName: "AnswerCollectionViewCell", bundle: nil)
+        collectionView.register(cellQ2Nib, forCellWithReuseIdentifier: "AnswerCollectionViewCell")
         collectionView.dataSource = self
         collectionView.delegate = self
         nextButton.isEnabled = false
     }
     
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? MarvelQuizAnswerOneViewController {
-            
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? MarvelQuizAnswerTwoViewController {
             let selectedAnswer = isCorrect ? "You are Correct!" : "You are Wrong!"
-            let correctAnswer = "Answer: Bucky"
+            let correctAnswer = "Answer: Silver Surfer"
             
             destVC.resultsArray[0] = selectedAnswer
             destVC.resultsArray[1] = correctAnswer
@@ -30,10 +48,10 @@ class MarvelQuizViewController: UIViewController {
     }
 }
 
-extension MarvelQuizViewController: UICollectionViewDelegate {
+extension MarvelQuizQuestionTwoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         nextButton.isEnabled = true
-        if (indexPath.row == 2) {
+        if (indexPath.row == 0) {
             isCorrect = true
         } else {
             isCorrect = false
@@ -41,8 +59,7 @@ extension MarvelQuizViewController: UICollectionViewDelegate {
     }
 }
 
-
-extension MarvelQuizViewController: UICollectionViewDataSource {
+extension MarvelQuizQuestionTwoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return answers.count
     }
