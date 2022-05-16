@@ -46,6 +46,17 @@ class ViewController: UIViewController {
     @IBAction func unwind(_ seg: UIStoryboardSegue) {}
     @IBAction func unwind2(_ seg: UIStoryboardSegue) {}
     @IBAction func unwind3(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind4(_ seg: UIStoryboardSegue) {}
+    
+    @IBAction func unwind5(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind6(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind7(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind8(_ seg: UIStoryboardSegue) {}
+    
+    @IBAction func unwind9(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind10(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind11(_ seg: UIStoryboardSegue) {}
+    @IBAction func unwind12(_ seg: UIStoryboardSegue) {}
 }
 
 extension ViewController: UITableViewDelegate {

@@ -1,20 +1,21 @@
 //
-//  MathQuizViewController.swift
+//  MathQuizQuestionTwoViewController.swift
 //  iQuiz
 //
-//  Created by Patrick Liu on 5/13/22.
+//  Created by Patrick Liu on 5/16/22.
 //
 
 import UIKit
 
-class MathQuizViewController: UIViewController {
-    
+class MathQuizQuestionTwoViewController: UIViewController {
+
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
 
-    let answers = ["12", "2", "0", "8 "]
+    let answers = ["Yes", "No", "Maybe", "So"]
     var isCorrect = false
     var score = 0
+    var currentScore = 0
 
     
     override func viewDidLoad() {
@@ -27,22 +28,22 @@ class MathQuizViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? MathQuizAnswerOneViewController {
+        if let destVC = segue.destination as? MathQuizAnswerTwoViewController {
             
             let selectedAnswer = isCorrect ? "You are Correct!" : "You are Wrong!"
-            let correctAnswer = "Answer: 2"
+            let correctAnswer = "Answer: Yes"
             
             destVC.resultsArray[0] = selectedAnswer
             destVC.resultsArray[1] = correctAnswer
-            destVC.currentScore = score
+            destVC.currentScore = currentScore + score
         }
     }
 }
 
-extension MathQuizViewController: UICollectionViewDelegate {
+extension MathQuizQuestionTwoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         nextButton.isEnabled = true
-        if (indexPath.row == 1) {
+        if (indexPath.row == 0) {
             isCorrect = true
             score = 1
         } else {
@@ -53,7 +54,7 @@ extension MathQuizViewController: UICollectionViewDelegate {
 }
 
 
-extension MathQuizViewController: UICollectionViewDataSource {
+extension MathQuizQuestionTwoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return answers.count
     }

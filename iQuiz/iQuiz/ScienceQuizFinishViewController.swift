@@ -1,5 +1,5 @@
 //
-//  MarvelQuizFinishViewController.swift
+//  ScienceQuizFinishViewController.swift
 //  iQuiz
 //
 //  Created by Patrick Liu on 5/16/22.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class MarvelQuizFinishViewController: UIViewController {
-    
+class ScienceQuizFinishViewController: UIViewController {
+
     var finalScore = 0
     @IBOutlet weak var scoreLabel: UILabel!
 
@@ -33,5 +33,4 @@ class MarvelQuizFinishViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

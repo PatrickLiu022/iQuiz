@@ -14,6 +14,8 @@ class MarvelQuizQuestionThreeViewController: UIViewController {
 
     let answers = ["62", "78", "3", "85"]
     var isCorrect = false
+    var score = 0
+    var currentScore = 0
 
     
     override func viewDidLoad() {
@@ -33,6 +35,7 @@ class MarvelQuizQuestionThreeViewController: UIViewController {
             
             destVC.resultsArray[0] = selectedAnswer
             destVC.resultsArray[1] = correctAnswer
+            destVC.currentScore = currentScore + score
         }
     }
 }
@@ -42,8 +45,10 @@ extension MarvelQuizQuestionThreeViewController: UICollectionViewDelegate {
         nextButton.isEnabled = true
         if (indexPath.row == 3) {
             isCorrect = true
+            score = 1
         } else {
             isCorrect = false
+            score = 0
         }
     }
 }

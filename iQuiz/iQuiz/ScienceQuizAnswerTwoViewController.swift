@@ -1,5 +1,5 @@
 //
-//  MarvelQuizAnswerTwoViewController.swift
+//  ScienceQuizAnswerTwoViewController.swift
 //  iQuiz
 //
 //  Created by Patrick Liu on 5/16/22.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class MarvelQuizAnswerTwoViewController: UIViewController {
-    
+class ScienceQuizAnswerTwoViewController: UIViewController {
+
     var resultsArray: [String] = ["", "", "--------", "Go To Next", "Go To Home"]
     var currentScore = 0
     
@@ -23,7 +23,7 @@ class MarvelQuizAnswerTwoViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as? MarvelQuizQuestionThreeViewController
+        let destVC = segue.destination as? ScienceQuizQuestionThreeViewController
         destVC?.currentScore = currentScore
     }
     
@@ -40,18 +40,18 @@ class MarvelQuizAnswerTwoViewController: UIViewController {
 
 }
 
-extension MarvelQuizAnswerTwoViewController: UITableViewDelegate {
+extension ScienceQuizAnswerTwoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 4 {
             performSegue(withIdentifier: "UnwindToHome", sender: self)
         }
         else if indexPath.row == 3 {
-            performSegue(withIdentifier: "MarvelQuestionThreeVCSegue", sender: self)
+            performSegue(withIdentifier: "ScienceQuizQuestionThreeVCSegue", sender: self)
         }
     }
 }
 
-extension MarvelQuizAnswerTwoViewController: UITableViewDataSource {
+extension ScienceQuizAnswerTwoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultsArray.count
     }

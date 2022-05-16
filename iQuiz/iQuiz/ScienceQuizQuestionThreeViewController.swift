@@ -1,20 +1,21 @@
 //
-//  MathQuizViewController.swift
+//  ScienceQuizQuestionThreeViewController.swift
 //  iQuiz
 //
-//  Created by Patrick Liu on 5/13/22.
+//  Created by Patrick Liu on 5/16/22.
 //
 
 import UIKit
 
-class MathQuizViewController: UIViewController {
-    
+class ScienceQuizQuestionThreeViewController: UIViewController {
+
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
 
-    let answers = ["12", "2", "0", "8 "]
+    let answers = ["5", "160", "206", "326"]
     var isCorrect = false
     var score = 0
+    var currentScore = 0
 
     
     override func viewDidLoad() {
@@ -27,22 +28,22 @@ class MathQuizViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? MathQuizAnswerOneViewController {
+        if let destVC = segue.destination as? ScienceQuizAnswerThreeViewController {
             
             let selectedAnswer = isCorrect ? "You are Correct!" : "You are Wrong!"
-            let correctAnswer = "Answer: 2"
+            let correctAnswer = "Answer: 206"
             
             destVC.resultsArray[0] = selectedAnswer
             destVC.resultsArray[1] = correctAnswer
-            destVC.currentScore = score
+            destVC.currentScore = currentScore + score
         }
     }
 }
 
-extension MathQuizViewController: UICollectionViewDelegate {
+extension ScienceQuizQuestionThreeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         nextButton.isEnabled = true
-        if (indexPath.row == 1) {
+        if (indexPath.row == 2) {
             isCorrect = true
             score = 1
         } else {
@@ -53,7 +54,7 @@ extension MathQuizViewController: UICollectionViewDelegate {
 }
 
 
-extension MathQuizViewController: UICollectionViewDataSource {
+extension ScienceQuizQuestionThreeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return answers.count
     }
@@ -63,4 +64,5 @@ extension MathQuizViewController: UICollectionViewDataSource {
         cell.answerChoiceLabel.text = answers[indexPath.row]
         return cell
     }
+
 }

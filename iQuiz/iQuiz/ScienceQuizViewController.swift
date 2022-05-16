@@ -1,18 +1,18 @@
 //
-//  MathQuizViewController.swift
+//  ScienceQuizViewController.swift
 //  iQuiz
 //
-//  Created by Patrick Liu on 5/13/22.
+//  Created by Patrick Liu on 5/16/22.
 //
 
 import UIKit
 
-class MathQuizViewController: UIViewController {
-    
+class ScienceQuizViewController: UIViewController {
+
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
 
-    let answers = ["12", "2", "0", "8 "]
+    let answers = ["Selenium", "Titanium", "Platinum", "Zinc"]
     var isCorrect = false
     var score = 0
 
@@ -27,10 +27,10 @@ class MathQuizViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? MathQuizAnswerOneViewController {
+        if let destVC = segue.destination as? ScienceQuizAnswerOneViewController {
             
             let selectedAnswer = isCorrect ? "You are Correct!" : "You are Wrong!"
-            let correctAnswer = "Answer: 2"
+            let correctAnswer = "Answer: Selenium"
             
             destVC.resultsArray[0] = selectedAnswer
             destVC.resultsArray[1] = correctAnswer
@@ -39,10 +39,10 @@ class MathQuizViewController: UIViewController {
     }
 }
 
-extension MathQuizViewController: UICollectionViewDelegate {
+extension ScienceQuizViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         nextButton.isEnabled = true
-        if (indexPath.row == 1) {
+        if (indexPath.row == 0) {
             isCorrect = true
             score = 1
         } else {
@@ -53,7 +53,7 @@ extension MathQuizViewController: UICollectionViewDelegate {
 }
 
 
-extension MathQuizViewController: UICollectionViewDataSource {
+extension ScienceQuizViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return answers.count
     }

@@ -14,6 +14,8 @@ class MarvelQuizQuestionTwoViewController: UIViewController {
     
     let answers = ["Silver Surfer", "Iron Man", "Spider Man", "Uncle Ben"]
     var isCorrect = false
+    var score = 0
+    var currentScore = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,7 @@ class MarvelQuizQuestionTwoViewController: UIViewController {
             
             destVC.resultsArray[0] = selectedAnswer
             destVC.resultsArray[1] = correctAnswer
+            destVC.currentScore = currentScore + score
         }
     }
 }
@@ -53,8 +56,12 @@ extension MarvelQuizQuestionTwoViewController: UICollectionViewDelegate {
         nextButton.isEnabled = true
         if (indexPath.row == 0) {
             isCorrect = true
+            score = 1
+            print("score: \(currentScore)")
         } else {
             isCorrect = false
+            score = 0
+            print("score: \(currentScore)")
         }
     }
 }

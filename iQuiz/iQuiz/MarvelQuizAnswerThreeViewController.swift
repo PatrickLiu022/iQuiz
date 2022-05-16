@@ -10,6 +10,7 @@ import UIKit
 class MarvelQuizAnswerThreeViewController: UIViewController {
     
     var resultsArray: [String] = ["", "", "--------", "Go to Next", "Go to Home"]
+    var currentScore = 0
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -19,6 +20,11 @@ class MarvelQuizAnswerThreeViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as? MarvelQuizFinishViewController
+        destVC?.finalScore = currentScore
     }
     
 

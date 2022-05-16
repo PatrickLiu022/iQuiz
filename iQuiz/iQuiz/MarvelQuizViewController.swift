@@ -7,6 +7,7 @@ class MarvelQuizViewController: UIViewController {
 
 	let answers = ["Henry", "Tony", "Bucky", "Clint"]
     var isCorrect = false
+    var score = 0
 
 	
 	override func viewDidLoad() {
@@ -26,6 +27,7 @@ class MarvelQuizViewController: UIViewController {
             
             destVC.resultsArray[0] = selectedAnswer
             destVC.resultsArray[1] = correctAnswer
+            destVC.currentScore = score
         }
     }
 }
@@ -35,8 +37,10 @@ extension MarvelQuizViewController: UICollectionViewDelegate {
         nextButton.isEnabled = true
         if (indexPath.row == 2) {
             isCorrect = true
+            score = 1
         } else {
             isCorrect = false
+            score = 0
         }
     }
 }
