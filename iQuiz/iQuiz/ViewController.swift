@@ -9,8 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var jsonData = ""
     
     @IBOutlet weak var quizTableView: UITableView!
+    @IBOutlet weak var optionsControl: UIBarButtonItem!
     
     let quizTypes = ["Mathematics", "Marvel Super Heroes", "Science"]
     let quizImages = [
@@ -32,16 +34,24 @@ class ViewController: UIViewController {
         quizTableView.register(quizNib, forCellReuseIdentifier: "QuizTypeTableViewCell")
         quizTableView.delegate = self
         quizTableView.dataSource = self
+        
     }
 
-    @IBAction func displayAlert() {
-        let alert = UIAlertController(title: "Settings go here", message: "OK", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
-            (action) in
-            print("Cancel")
-        }))
-        self.present(alert, animated: true)
+
+    @IBAction func displayPopover() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let optionsVC = storyboard.instantiateViewController(
+                   withIdentifier: "PopoverViewController")
+         
+        optionsVC.modalPresentationStyle = .popover
+        optionsVC.popoverPresentationController?.barButtonItem =
+                   optionsControl
+        self.present(optionsVC, animated: true) {
+        }
+        
     }
+    
     
     @IBAction func unwind(_ seg: UIStoryboardSegue) {}
     @IBAction func unwind2(_ seg: UIStoryboardSegue) {}

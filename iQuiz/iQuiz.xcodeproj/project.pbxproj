@@ -43,6 +43,7 @@
 		1FE7A975282BA0AB00D61DA2 /* iQuizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE7A974282BA0AB00D61DA2 /* iQuizUITestsLaunchTests.swift */; };
 		1FE7A983282BC57400D61DA2 /* QuizTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE7A981282BC57400D61DA2 /* QuizTypeTableViewCell.swift */; };
 		1FE7A984282BC57400D61DA2 /* QuizTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE7A982282BC57400D61DA2 /* QuizTypeTableViewCell.xib */; };
+		1FF0AFD828366098009D16BB /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0AFD728366097009D16BB /* PopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		1FE7A974282BA0AB00D61DA2 /* iQuizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuizUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1FE7A981282BC57400D61DA2 /* QuizTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTypeTableViewCell.swift; sourceTree = "<group>"; };
 		1FE7A982282BC57400D61DA2 /* QuizTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizTypeTableViewCell.xib; sourceTree = "<group>"; };
+		1FF0AFD728366097009D16BB /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				1FE7A953282BA0A800D61DA2 /* SceneDelegate.swift */,
 				1FE7A955282BA0A800D61DA2 /* ViewController.swift */,
 				1FE7A957282BA0A800D61DA2 /* Main.storyboard */,
+				1FF0AFD728366097009D16BB /* PopoverViewController.swift */,
 				1FA42B212832789D002130C8 /* ScienceQuizViewController.swift */,
 				1FA42B2528327C7C002130C8 /* ScienceQuizAnswerOneViewController.swift */,
 				1FA42B2728327D12002130C8 /* ScienceQuizQuestionTwoViewController.swift */,
@@ -358,6 +361,7 @@
 				1FE7A954282BA0A800D61DA2 /* SceneDelegate.swift in Sources */,
 				1FA42B2628327C7C002130C8 /* ScienceQuizAnswerOneViewController.swift in Sources */,
 				1FA42B1828326E61002130C8 /* MathQuizQuestionTwoViewController.swift in Sources */,
+				1FF0AFD828366098009D16BB /* PopoverViewController.swift in Sources */,
 				1FA42B1E2832737B002130C8 /* MathQuizAnswerThreeViewController.swift in Sources */,
 				1FA42B0A28323F97002130C8 /* MarvelQuizQuestionTwoViewController.swift in Sources */,
 				1FA42B1C283271CF002130C8 /* MathQuizQuestionThreeViewController.swift in Sources */,

@@ -33,7 +33,7 @@
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                             </buttonConfiguration>
                                             <connections>
-                                                <action selector="displayAlert" destination="BYZ-38-t0r" eventType="touchDown" id="oYn-YA-tjA"/>
+                                                <action selector="displayPopover" destination="BYZ-38-t0r" eventType="touchUpInside" id="4OH-ot-0aE"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -55,6 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="h5W-dB-8fC"/>
                     <connections>
+                        <outlet property="optionsControl" destination="Go4-Tr-fib" id="jCA-3a-HNg"/>
                         <outlet property="quizTableView" destination="dU0-0E-XG8" id="7Nk-88-Uts"/>
                         <segue destination="xwg-2W-Bsx" kind="show" identifier="MathQuizVCSegue" id="XVF-s0-ywv"/>
                         <segue destination="Mdi-Ef-yKd" kind="show" identifier="MarvelQuizVCSegue" id="D9q-JB-QQJ"/>
@@ -64,6 +65,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="97.767857142857139"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="KxE-Q7-7BO">
+            <objects>
+                <viewController storyboardIdentifier="PopoverViewController" id="VM4-bT-T0K" customClass="PopoverViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gva-vY-Xyn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkI-61-ae9">
+                                <rect key="frame" x="99" y="44" width="216" height="169"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Check Now"/>
+                                <connections>
+                                    <action selector="loadData" destination="VM4-bT-T0K" eventType="touchUpInside" id="rJw-Wr-Yn7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECl-Cd-cJH">
+                                <rect key="frame" x="99" y="210" width="216" height="169"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Settings"/>
+                                <connections>
+                                    <action selector="goToSettings:" destination="VM4-bT-T0K" eventType="touchUpInside" id="SsO-Xv-3uA"/>
+                                    <action selector="loadData" destination="VM4-bT-T0K" eventType="touchUpInside" id="6Ql-GT-hEp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Adg-T9-X9A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Adg-T9-X9A" firstAttribute="trailing" secondItem="rkI-61-ae9" secondAttribute="trailing" constant="99" id="8r6-7E-9Y1"/>
+                            <constraint firstItem="rkI-61-ae9" firstAttribute="leading" secondItem="Adg-T9-X9A" secondAttribute="leading" constant="99" id="Ik4-Nb-cvw"/>
+                            <constraint firstItem="Adg-T9-X9A" firstAttribute="bottom" secondItem="ECl-Cd-cJH" secondAttribute="bottom" constant="483" id="NEB-Ba-dYv"/>
+                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="leading" secondItem="rkI-61-ae9" secondAttribute="leading" id="Rh8-iZ-i6c"/>
+                            <constraint firstItem="rkI-61-ae9" firstAttribute="bottom" secondItem="Adg-T9-X9A" secondAttribute="bottom" constant="-649" id="WLp-Ln-f3i"/>
+                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="trailing" secondItem="rkI-61-ae9" secondAttribute="trailing" id="adc-EH-EQL"/>
+                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="top" secondItem="Adg-T9-X9A" secondAttribute="top" constant="166" id="nck-Qv-VyT"/>
+                            <constraint firstItem="rkI-61-ae9" firstAttribute="top" secondItem="Adg-T9-X9A" secondAttribute="top" id="u7H-Ea-wpT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekb-1K-WCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="761.38392857142856"/>
         </scene>
         <!--Math Quiz View Controller-->
         <scene sceneID="q7h-gm-dcS">
