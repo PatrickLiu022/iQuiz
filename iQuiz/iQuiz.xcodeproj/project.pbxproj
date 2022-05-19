@@ -44,6 +44,7 @@
 		1FE7A983282BC57400D61DA2 /* QuizTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE7A981282BC57400D61DA2 /* QuizTypeTableViewCell.swift */; };
 		1FE7A984282BC57400D61DA2 /* QuizTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE7A982282BC57400D61DA2 /* QuizTypeTableViewCell.xib */; };
 		1FF0AFD828366098009D16BB /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0AFD728366097009D16BB /* PopoverViewController.swift */; };
+		1FF0AFDA28367289009D16BB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0AFD928367289009D16BB /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		1FE7A981282BC57400D61DA2 /* QuizTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTypeTableViewCell.swift; sourceTree = "<group>"; };
 		1FE7A982282BC57400D61DA2 /* QuizTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizTypeTableViewCell.xib; sourceTree = "<group>"; };
 		1FF0AFD728366097009D16BB /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		1FF0AFD928367289009D16BB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				1FA42AF8282F4AB5002130C8 /* AnswerSelectionTableViewCell.xib */,
 				1FE7A95A282BA0AB00D61DA2 /* Assets.xcassets */,
 				1FE7A95C282BA0AB00D61DA2 /* LaunchScreen.storyboard */,
+				1FF0AFD928367289009D16BB /* Settings.bundle */,
 				1FE7A95F282BA0AB00D61DA2 /* Info.plist */,
 			);
 			path = iQuiz;
@@ -321,6 +324,7 @@
 				1FA42AFA282F4AB5002130C8 /* AnswerSelectionTableViewCell.xib in Resources */,
 				1FE7A95B282BA0AB00D61DA2 /* Assets.xcassets in Resources */,
 				1FE7A959282BA0A800D61DA2 /* Main.storyboard in Resources */,
+				1FF0AFDA28367289009D16BB /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

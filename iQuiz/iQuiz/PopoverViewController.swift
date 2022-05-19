@@ -9,8 +9,6 @@ import UIKit
 
 class PopoverViewController: UIViewController {
     
-    var questionsString = ""
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

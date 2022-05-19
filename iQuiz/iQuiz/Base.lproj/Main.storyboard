@@ -83,26 +83,25 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECl-Cd-cJH">
-                                <rect key="frame" x="99" y="210" width="216" height="169"/>
+                                <rect key="frame" x="99" y="693" width="216" height="169"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Settings"/>
                                 <connections>
-                                    <action selector="goToSettings:" destination="VM4-bT-T0K" eventType="touchUpInside" id="SsO-Xv-3uA"/>
-                                    <action selector="loadData" destination="VM4-bT-T0K" eventType="touchUpInside" id="6Ql-GT-hEp"/>
+                                    <action selector="goToSettings:" destination="VM4-bT-T0K" eventType="touchUpInside" id="9PA-F9-bHo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Adg-T9-X9A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="bottom" secondItem="Adg-T9-X9A" secondAttribute="bottom" id="6XH-0u-2Qg"/>
                             <constraint firstItem="Adg-T9-X9A" firstAttribute="trailing" secondItem="rkI-61-ae9" secondAttribute="trailing" constant="99" id="8r6-7E-9Y1"/>
+                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="top" secondItem="rkI-61-ae9" secondAttribute="bottom" constant="480" id="9Cs-TC-FjM"/>
                             <constraint firstItem="rkI-61-ae9" firstAttribute="leading" secondItem="Adg-T9-X9A" secondAttribute="leading" constant="99" id="Ik4-Nb-cvw"/>
-                            <constraint firstItem="Adg-T9-X9A" firstAttribute="bottom" secondItem="ECl-Cd-cJH" secondAttribute="bottom" constant="483" id="NEB-Ba-dYv"/>
-                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="leading" secondItem="rkI-61-ae9" secondAttribute="leading" id="Rh8-iZ-i6c"/>
                             <constraint firstItem="rkI-61-ae9" firstAttribute="bottom" secondItem="Adg-T9-X9A" secondAttribute="bottom" constant="-649" id="WLp-Ln-f3i"/>
-                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="trailing" secondItem="rkI-61-ae9" secondAttribute="trailing" id="adc-EH-EQL"/>
-                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="top" secondItem="Adg-T9-X9A" secondAttribute="top" constant="166" id="nck-Qv-VyT"/>
+                            <constraint firstItem="Adg-T9-X9A" firstAttribute="trailing" secondItem="ECl-Cd-cJH" secondAttribute="trailing" constant="99" id="mW0-UE-wwZ"/>
                             <constraint firstItem="rkI-61-ae9" firstAttribute="top" secondItem="Adg-T9-X9A" secondAttribute="top" id="u7H-Ea-wpT"/>
+                            <constraint firstItem="ECl-Cd-cJH" firstAttribute="leading" secondItem="Adg-T9-X9A" secondAttribute="leading" constant="99" id="xKK-dm-chf"/>
                         </constraints>
                     </view>
                 </viewController>

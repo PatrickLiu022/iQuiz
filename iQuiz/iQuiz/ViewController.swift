@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         quizTableView.delegate = self
         quizTableView.dataSource = self
         
+        let lightMode = UserDefaults.standard.bool(forKey: "enabled_preference")
+        print("Light mode is \(lightMode) enabled")
+        
+        UserDefaults.standard.set(1.0, forKey: "slider_preference")
+        print("1.0 missiles set to launch")
+        
     }
 
 
